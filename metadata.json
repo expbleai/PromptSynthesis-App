@@ -1,0 +1,7 @@
+{
+  "name": "Prompt Synthesis",
+  "description": "A world-class prompt engineering platform to transform vague ideas into precise, high-performing AI commands.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
