@@ -7,9 +7,18 @@ export interface RiccePrompt {
   evaluation: string;
 }
 
+export interface PromptChainStep {
+  id: string;
+  name: string;
+  promptData: RiccePrompt;
+  output?: string;
+  status: 'idle' | 'running' | 'completed' | 'error';
+}
+
 export interface SavedPrompt {
   id: string;
   name: string;
+  description?: string;
   data: RiccePrompt;
   timestamp: number;
 }
@@ -53,5 +62,6 @@ export enum AppStep {
   INITIAL = 'INITIAL',
   BUILDER = 'BUILDER',
   TESTING = 'TESTING',
-  IMAGE_LAB = 'IMAGE_LAB'
+  IMAGE_LAB = 'IMAGE_LAB',
+  CHAINER = 'CHAINER'
 }
